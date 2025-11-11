@@ -1,0 +1,55 @@
+.header {
+    background-color: var(--green);
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: var(--green);
+        padding: 32px 0 12px 20px;
+        @media (max-width: 768px) {
+            padding: 32px 0 0;
+        }
+        @media (max-width: 412px) {
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        // height: 48px;
+        height: min(48px, max(var(--vw)* 48, 34px));
+    }
+
+    &__letter {
+        // width: 45px;
+        width: min(45px, max(var(--vw)* 45, 20px));
+        // height: 48px;
+        height: min(48px, max(var(--vw)* 48, 22px));
+    }
+
+    &__btn {
+        background-color: var(--yellow);
+        text-align: center;
+        @media (max-width: 768px) {
+            border-radius: 8px;
+        }
+        &:hover {
+            will-change: transform;
+            background-color: var(--yellow-hover);
+            transition: background-color 0.5s;
+        }
+    }
+    &__link {
+        padding: 8px 27px;
+        padding: 8px min(27px, max(var(--vw)* 27, 0px));
+        color: var(--green);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 0;
+        &:hover {
+            will-change: transform;
+            color: var(--violet);
+            transition: color 0.2s;
+        }
+    }
+}

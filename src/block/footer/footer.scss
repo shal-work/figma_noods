@@ -1,0 +1,120 @@
+.footer {
+    background-color: var(--violet);
+    // padding-top: 130px;
+    padding-top: min(130px, max(var(--vw)* 130, 40px));
+    // padding-bottom: 128px;
+    padding-bottom: min(128px, max(var(--vw)* 128, 40px));
+    --container-padding-x: min(115px, max(var(--vw)* 115, 24px));
+    &__info {
+        display: flex;
+        gap: min(420px, max(var(--vw)* 420, 24px));
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
+    &__left {
+        width: 50%;
+        @media (max-width: 1024px) {
+            width: auto;
+        }
+    }
+
+    &__right {
+        width: 50%;
+        @media (max-width: 1024px) {
+            width: auto;
+        }        
+    }
+
+    &__title {
+        font-size: 42px;
+        line-height: 48px;
+        color: var(--yellow);
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        color: var(--yellow);
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: space-between;
+        // margin-top: 112px;
+        margin-top: min(112px, max(var(--vw)* 112, 24px));
+        margin-bottom: 32px;
+    }
+    &__letter {
+        width: auto;
+        height: min(240px, max(var(--vw)* 240, 24px));
+    }
+    &__block {
+        background-color: var(--yellow);
+        width: 320px;
+        overflow: hidden;
+        margin: 0 0 30px auto;
+        padding: 7px;
+        @media (max-width: 412px) {
+            width: auto;
+        }
+    }
+    &__run-lines {
+        mask-image: linear-gradient(
+            to right,
+            hsl(0 0% 0% / 0),
+            hsl(0 0% 0% / 1) 20%,
+            hsl(0 0% 0% / 1) 80%,
+            hsl(0 0% 0% / 0)
+        );
+    }
+    &__lines {
+        display: flex;
+        justify-content: space-between;
+        animation: marquee 10s infinite linear;
+        min-width: 320px;
+    }
+
+    &__line {
+        display: flex;
+        font-size: 18px;
+        line-height: 18px;
+        padding: 5px;
+        color: var(--violet);
+        min-width: 160px;
+        &::before {
+            content: url('/assets/img/asterisk.svg');
+            width: 20px;
+            height:20px;
+            display: block;
+        }
+    }
+    &__links {
+        display: flex;
+        column-gap: 25%;
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            column-gap: 0;
+            
+        }
+        @media (max-width: 412px) {
+            flex-direction: column;
+            row-gap: 25px;
+        }
+    }
+
+    &__link {
+        color: var(--yellow);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

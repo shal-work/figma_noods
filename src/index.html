@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afisha website by figma</title>
+    <meta name="description" content="Сайт по макерту Figma из https://verstaem.online/projects/">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="visually-hidden">Afisha web-site for verstaem.online</h1>
+        @@include('block/header/header.html')
+        @@include('block/header-content/header-content.html')
+
+        @@include('block/prime/prime.html')
+        @@include('block/questions/questions.html')
+        @@include('block/banners/banners.html')
+        @@include('block/footer/footer.html')
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+*{
+    // margin: 0;
+    // padding: 0;
+    box-sizing: border-box;
+    // outline: 1px solid red;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+:root {
+    --index: calc(1vw + 1vh);
+    --vw: calc(100vw/1440);
+    --container-padding-x: 26px;
+    // --container-padding-x: min(165px, max(var(--vw)* 165, 24px));
+    // --container-width: 1440px;
+    --container-width: min(1440px, max(var(--vw)* 1440, 24px));
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0;
+}
+
+
+// прячем прокрутку
+::-webkit-scrollbar {
+    width: 0px;
+    height: 5px;
+    background: transparent;
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    // background: #FF0000;
+    background: var(--grey40);
+    // background: #4a4b4c;
+}
+.reset {
+    margin: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *
+    padding: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *
+}
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin: 0 auto;
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
+    width: 100%;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+.fadeIn {
+    opacity: 1;
+}
+
+.input-reset {
+    background: 0 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.button-reset {
+    background: 0 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+}

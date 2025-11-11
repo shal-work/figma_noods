@@ -1,0 +1,38 @@
+.btn {
+    display: inline-block;
+    padding: 19px 29px;
+    border: 1px solid var(--violet);
+    background-color: var(--yellow);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--violet);
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.2s;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    &:hover {
+        background-color: var(--yellow-hover);
+        border: 1px solid var(--yellow-hover);
+    }
+    @media (max-width: 1200px) {
+        font-size: min(19px, max(var(--vw)* 19, 14px));
+        padding: min(19px, max(var(--vw)* 19, 6px))  min(29px, max(var(--vw)* 29, 6px));
+    }
+}
+
+.btn-area {
+    position: absolute;
+    background: transparent;
+    border: transparent;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}

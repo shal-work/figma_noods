@@ -1,0 +1,296 @@
+.smiley {
+    padding: 190px 10px;
+    padding: min(190px, max(var(--vw)* 190, 20px)) 10px;
+    &__face {
+        display: flex;
+        justify-content: center;
+        width: 228px;
+        height: 230px;
+        border-radius: 50%;
+        background-color: var(--yellow);
+        border: 3px solid var(--green);
+        margin: 0 auto;
+        position: relative;
+        @media (max-width: 768px) {
+            width: 123px;
+            height: 123px;
+        }
+    }
+
+    &__eyes {
+        width: 69px;
+        height: 44px;
+        border-left: 3px solid var(--green);
+        border-right: 3px solid var(--green);
+        top: 44px;
+        // left: 102px;
+        left: 50%;
+        position: absolute;
+        will-change: contents;
+        animation: blink 1100ms linear infinite;
+        @media (max-width: 768px) {
+            width: 32px;
+            height: 26px;
+            top: 26px;
+        }
+    }
+    &__mouth {
+        width: 150px;
+        height: 14px;
+        border: 3px solid var(--green);
+        background-color: var(--white);
+        top: 124px;
+        // left: 48px;
+        position: absolute;
+        z-index: 10;
+        @media (max-width: 768px) {
+            width: 74px;
+            height: 10px;
+            top: 68px;
+        }
+    }
+
+    &__mouth-shadow {
+        width: 148px;
+        height: 68px;
+        border: 3px solid var(--green);
+        border-bottom-right-radius: 76px;
+        border-bottom-left-radius: 76px;
+        background-color: var(--green);
+        top: 134px;
+        left: 48px;
+        position: absolute;
+        @media (max-width: 768px) {
+            width: 73px;
+            height: 34px;
+            top: 74px;
+            left: 26px;
+        }        
+    }
+    &__language {
+        width: 83px;
+        height: 100px;
+        top: 138px;
+        left: 80px;
+        position: absolute;
+        z-index: 20;
+        @media (max-width: 768px) {
+            width: 41px;
+            height: 80px;
+            top: 60px;
+            left: 41px;
+        }         
+    }
+
+    &__language-shadow {
+        width: 83px;
+        height: 100px;
+        top: 150px;
+        left: 67px;
+        position: absolute;
+        z-index: 10;
+        @media (max-width: 768px) {
+            width: 36px;
+            height: 76px;
+            top: 65px;
+            left: 38px;
+        }         
+    }
+    &__face-star {
+        top: 86px;
+        left: 160px;
+        width: 77px;
+        height: 73px;
+        position: absolute;
+        z-index: 20;
+        @media (max-width: 768px) {
+            width: 30px;
+            height: 30px;
+            top: 47px;
+            left: 91px;
+        }
+    }
+    &__line {
+        width: 0px;
+        height: 48px;
+        border-left: 3px solid var(--green);
+        top: 139px;
+        left: 121px;
+        position: absolute;
+        z-index: 30;
+        @media (max-width: 768px) {
+            top: 82px;
+            left: 59px;
+            height: 30px;
+        }
+    }
+
+    &__bubbles-left {
+        width: 56px;
+        height: 57px;
+        position: relative;
+        top: 107px;
+        left: 8px;
+        z-index: 10;
+        @media (max-width: 768px) {
+            width: 38px;
+            height: 38px;
+            top: 55px;
+            left: -11px;
+        }        
+    }
+    &__bubbles-right {
+        width: 55px;
+        height: 61px;
+        position: relative;
+        top: 119px;
+        left: 102px;
+        z-index: 10;
+        @media (max-width: 768px) {
+            width: 40px;
+            height: 40px;
+            top: 54px;
+            left: 57px;
+        }   
+    }
+    &__star {
+        top: 130px;
+        right: calc( -1 *  min(230px, max(var(--vw)* 230, 150px)));
+        width: 77px;
+        height: 73px;
+        position: relative;
+        z-index: 20;
+        @media (max-width: 768px) {
+            width: 40px;
+            height: 40px;
+            top: -5px;
+            right: -100px;
+        }           
+    }
+    &__pill-left {
+        position: absolute;
+        width: 53px;
+        height: 44px;
+        bottom: 12px;
+        left: -37px;
+        @media (max-width: 768px) {
+            width: 40px;
+            height: 38px;
+            left: -70px;
+        }   
+    }
+    &__pill-right {
+        position: absolute;
+        width: 53px;
+        height: 44px;
+        bottom: 12px;
+        right: -49px;
+        @media (max-width: 768px) {
+            width: 40px;
+            height: 38px;
+            right: -70px;
+        }           
+    }
+    &__toothbrushes {
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        width: 377px;
+        top: 63px;
+        @media (max-width: 768px) {
+            width: 250px;
+        } 
+    }
+    &__block-left {
+        will-change: transform;
+        animation: move1 1000ms linear infinite;
+    }
+    &__block-right {
+        will-change: transform;
+        animation: move2 1100ms linear infinite;
+    }
+    &__toothbrush {
+        width: 400px;
+        height: 30px;
+        position: absolute;
+        background-color: var(--pink);
+        border: 2px solid var(--green);
+        @media (max-width: 768px) {
+            width: 250px;
+            height: 20px;
+        } 
+        &_left {
+            transform: rotateZ(20deg);
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+        &_right {
+            transform: rotateZ(-20deg);
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }        
+    }
+    &__bristle-left {
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: -99px;
+        left: 17px;
+        @media (max-width: 768px) {
+            top: -70px;
+            left: 9px;
+        }         
+    }    
+    &__bristle-right {
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: -97px;
+        left: 319px;
+        transform: rotateY(180deg);
+        @media (max-width: 768px) {
+            top: -68px;
+            left: 177px;
+        } 
+    }
+}
+
+
+@keyframes move1 {
+	from { 
+        transform: translate(0px, 0px);
+    }
+	50% { 
+        transform: translate(60px, 30px);
+    }
+	to { 
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes move2 {
+	from { 
+        transform: translate(0px, 0px);
+    }
+	50% { 
+        transform: translate(-60px, 30px);
+    }
+	to { 
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes blink {
+	from { 
+        left: 50%;
+    }
+    49% { 
+        left: 50%;
+    }
+    50% { 
+        left: 25%;
+    }
+	to { 
+        left: 25%;
+    }
+}

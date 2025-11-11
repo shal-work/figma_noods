@@ -1,0 +1,200 @@
+.header-content {
+    background-color: var(--green);
+    padding-bottom: 78px;
+    @media (max-width: 412px) {
+        padding-bottom: 150px;
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-top: 65px;
+
+        --orbit-x: min(981px, max(var(--vw)* 981, 360px));
+        --orbit-y: min(497px, max(var(--vw)* 497, 182px));
+    }
+
+    &__block {
+        // margin: 0 92px;
+        margin: 0 min(92px, max(var(--vw)* 92, 0px));
+        position: absolute;
+        // padding-bottom: 73px;
+        // top: 156px;
+        top: min(156px, max(var(--vw)* 156, 34px));
+        z-index: 20;
+        @media (max-width: 768px) {
+           position: relative;
+           top: 0;
+           margin-bottom: max(10vw, 20px);
+           margin-bottom: 10vw;
+        }
+
+    }
+    &__title {
+        font-weight: 400;
+        // font-size: 105px;
+        font-size: min(105px, max(var(--vw)* 105, 16px));
+        // line-height: 108.8px;
+        line-height: min(108.8px, max(var(--vw)* 108.8, 20px));
+        letter-spacing: 0;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--yellow);
+    }
+
+    &__oval {
+        width: min(981px, max(var(--vw)* 981, 360px));
+        height: min(497px, max(var(--vw)* 497, 182px));
+        background-color: transparent;  
+        border: 1px solid var(--yellow);
+        border-radius: 50%; 
+        transform: rotateZ(-21deg); 
+        position: relative;
+        margin: 0 auto;
+        z-index: 10;
+        @media (max-width: 768px) {
+            position: absolute;
+            top: 10vw;
+        }
+    }
+
+    &__pill {
+        position: absolute;
+        width: min(167px, max(var(--vw)* 167, 63px));
+        height: min(112px, max(var(--vw)* 112, 42px));
+    }
+    &__pill_1 {
+        transform: rotateZ(19deg);
+        --orbit-x: min(1064px, max(var(--vw)* 1064, 391px)); //подобрал 981 + 1/2 ширины таблетки (83,5)
+        --orbit-y: min(553px, max(var(--vw)* 553, 203px)); //подобрал 553 + 1/2 высоты таблетки (56)
+        --angle: 214deg;
+        top: min(179px, max(var(--vw)* 179, 0px)); //работает вместе с --angle: 214deg;
+        left: min(406px, max(var(--vw)* 406, 0px)); //работает вместе с --angle: 214deg;
+
+        --x-amplitude: calc(var(--orbit-x ) / 2);
+        --y-amplitude: calc(var(--orbit-y ) / 2);
+
+        --x: calc(cos(var(--angle)) * var(--x-amplitude));
+        --y: calc(sin(var(--angle)) * var(--y-amplitude));
+        translate: var(--x) var(--y);
+
+        animation: revolve 6000ms linear infinite;
+   		@supports (-webkit-touch-callout: default ) {
+            // статика без анимации
+            top: min(22px, max(var(--vw)* 22, 8.4px));
+            left: calc(-1 * min(38px, max(var(--vw)* 38, 14.4px)));
+		}
+
+        @media (max-width: 412px) {
+            top: 74px;
+            left: 141px;
+            --x-amplitude: 180px;
+            --y-amplitude: 91px;
+        }
+    }
+
+    &__pill_2 {
+        transform: rotateZ(352deg);
+        width: min(141px, max(var(--vw)* 141, 63px));
+        height: min(96px, max(var(--vw)* 96, 42px));
+
+        --orbit-x: min(981px, max(var(--vw)* 981, 360px)); //подобрал 981 + 1/2 ширины таблетки (83,5)
+        --orbit-y: min(497px, max(var(--vw)* 497, 182px)); //подобрал 553 + 1/2 высоты таблетки (56)
+        --angle: 320deg;
+        top: min(198px, max(var(--vw)* 198, 0px)); //работает вместе с --angle: 214deg;
+        left: min(386px, max(var(--vw)* 386, 0px)); //работает вместе с --angle: 214deg;
+
+
+        --x-amplitude: calc(var(--orbit-x ) / 2);
+        --y-amplitude: calc(var(--orbit-y ) / 2);
+
+        --x: calc(cos(var(--angle)) * var(--x-amplitude));
+        --y: calc(sin(var(--angle)) * var(--y-amplitude));
+        translate: var(--x) var(--y);
+        animation: revolve2 5000ms linear infinite;
+        @supports (-webkit-touch-callout: default ) {
+            // статика без анимации
+            top: min(40px, max(var(--vw)* 40, 15.2px));
+            left: min(757px, max(var(--vw)* 757, 287.6px));
+		}
+
+        @media (max-width: 412px) {
+            top: 74px;
+            left: 141px;
+            --x-amplitude: 180px;
+            --y-amplitude: 91px;
+        }
+    }
+    &__pill_3 {
+
+        transform: rotateZ(65deg);
+
+        --orbit-x: min(1064px, max(var(--vw)* 1064, 360px)); //подобрал 981 + 1/2 ширины таблетки (83,5)
+        --orbit-y: min(619px, max(var(--vw)* 619, 182px)); //подобрал 553 + 1/2 высоты таблетки (56)
+
+        --angle: 49deg;
+        top: min(198px, max(var(--vw)* 198, 0px)); //работает вместе с --angle: 214deg;
+        left: min(386px, max(var(--vw)* 386, 0px)); //работает вместе с --angle: 214deg;
+        // top: 236px;
+        // left: 395px;
+
+        --x-amplitude: calc(var(--orbit-x ) / 2);
+        --y-amplitude: calc(var(--orbit-y ) / 2);
+
+        --x: calc(cos(var(--angle)) * var(--x-amplitude));
+        --y: calc(sin(var(--angle)) * var(--y-amplitude));
+        translate: var(--x) var(--y);
+        animation: revolve3 5000ms linear infinite;
+        @supports (-webkit-touch-callout: default ) {
+            // статика без анимации
+            top: min(466px, max(var(--vw)* 466, 177px));
+            left: min(741px, max(var(--vw)* 741, 281.5px));
+		}
+        @media (max-width: 412px) {
+            top: 74px;
+            left: 141px;
+            --x-amplitude: 180px;
+            --y-amplitude: 91px;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        font-weight: 400;
+        // font-size: 24px;
+        font-size: min(24px, max(var(--vw)* 24, 12px));
+        line-height: 30px;
+        line-height: min(30px, max(var(--vw)* 30, 18px));
+        letter-spacing: 0;
+        text-align: center;
+        color: var(--yellow);
+        position: relative;
+        // top: 78px;
+        // margin: 0 502px;
+        max-width: 384px;
+        margin-top: 10px;
+        z-index: 40;
+    }
+
+
+}
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+
+@keyframes revolve {
+	from { --angle: -146deg; }
+	to { --angle: 214deg; }
+}
+@keyframes revolve2 {
+	from { --angle: -40deg; }
+	to { --angle: 320deg; }
+}
+@keyframes revolve3 {
+	from { --angle: 51deg; }
+	to { --angle: 411deg; }
+}
