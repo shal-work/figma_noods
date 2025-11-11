@@ -1,7 +1,6 @@
 .banners {
     background-color: var(--gray);
     position: relative;
-    // padding-bottom: 105px;
     padding-bottom: min(105px, max(var(--vw)* 105, 40px));
     &__box {
         margin: 0 auto;
@@ -28,13 +27,11 @@
     }
     &__line {
         border-bottom: 2px solid var(--yellow);
-        // top: 204px;
         top: min(204px, max(var(--vw)* 204, 150px));
         position: relative;
     }
 
     &__block {
-        // padding-top: 290px;
         padding-top: min(290px, max(var(--vw)* 290, 20px));
         position: relative;
     }
@@ -42,12 +39,10 @@
         font-weight: 500;
         font-size: 19px;
         line-height: 24px;
-        // padding: 16px;
         padding: min(16px, max(var(--vw)* 16, 10px));
         border: 2px solid var(--violet);
         background-color: var(--yellow);
         margin: 0 auto;
-        // width: 214px;
         width: min(214px, max(var(--vw)* 214, 150px));
         z-index: 10;
         position: relative;
@@ -69,17 +64,12 @@
         border: 3px solid var(--violet);
         &_we {
             transform: rotateZ(-18deg);
-            // width: 491px;
             width: min(491px, max(var(--vw)* 491, 50px));
-            // height: 515px;
             height: min(515px, max(var(--vw)* 515, 53px));
-            // left: 84px;
             left: min(84px, max(var(--vw)* 84, 0px));
         }
         &_are {
-            // width: 457px;
             width: min(457px, max(var(--vw)* 457, 50px));
-            // height: 484px;
             height: min(484px, max(var(--vw)* 484, 53px));
             transform: rotateZ(16deg);
             left: 8px;
@@ -89,12 +79,9 @@
             }
         }
         &_noodz {
-            // width: 491px;
             width: min(491px, max(var(--vw)* 491, 50px));
-            // height: 515px;
             height: min(515px, max(var(--vw)* 515, 52px));
             transform: rotateZ(-17deg);
-            // left: -60px;
             left: calc(-1 * min(84px, max(var(--vw)* 84, 0px)));
         }
     }

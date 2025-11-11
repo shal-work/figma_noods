@@ -16,11 +16,8 @@
     }
 
     &__block {
-        // margin: 0 92px;
         margin: 0 min(92px, max(var(--vw)* 92, 0px));
         position: absolute;
-        // padding-bottom: 73px;
-        // top: 156px;
         top: min(156px, max(var(--vw)* 156, 34px));
         z-index: 20;
         @media (max-width: 768px) {
@@ -33,9 +30,7 @@
     }
     &__title {
         font-weight: 400;
-        // font-size: 105px;
         font-size: min(105px, max(var(--vw)* 105, 16px));
-        // line-height: 108.8px;
         line-height: min(108.8px, max(var(--vw)* 108.8, 20px));
         letter-spacing: 0;
         text-align: center;
@@ -136,9 +131,6 @@
         --angle: 49deg;
         top: min(198px, max(var(--vw)* 198, 0px)); //работает вместе с --angle: 214deg;
         left: min(386px, max(var(--vw)* 386, 0px)); //работает вместе с --angle: 214deg;
-        // top: 236px;
-        // left: 395px;
-
         --x-amplitude: calc(var(--orbit-x ) / 2);
         --y-amplitude: calc(var(--orbit-y ) / 2);
 
@@ -162,7 +154,6 @@
     &__text {
         position: absolute;
         font-weight: 400;
-        // font-size: 24px;
         font-size: min(24px, max(var(--vw)* 24, 12px));
         line-height: 30px;
         line-height: min(30px, max(var(--vw)* 30, 18px));
@@ -170,8 +161,6 @@
         text-align: center;
         color: var(--yellow);
         position: relative;
-        // top: 78px;
-        // margin: 0 502px;
         max-width: 384px;
         margin-top: 10px;
         z-index: 40;

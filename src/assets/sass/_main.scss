@@ -33,21 +33,14 @@
 .face {
     display: flex;
     margin: 0 0 0 auto;
-    // width: 450px;
     width: min(450px, max(var(--vw)* 450, 100px));
-    // height: 492px;
     height: min(492px, max(var(--vw)* 492, 109px));
     transform: rotateZ(-16deg);
     z-index: 10;
     position: absolute;
-    // top: -113px;
-    // top: -min(113px, max(var(--vw)* 113, 64px));
     right: 30px;
-    // top: -255px;
     top: calc(-1 * min(263px, max(var(--vw)* 263, 10px)));
-
     &__img {
-        // border-radius: 49px;
         border-radius: min(49px, max(var(--vw)* 49, 16px));
         max-width: 100%;
         height: auto;

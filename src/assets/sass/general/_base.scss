@@ -1,6 +1,4 @@
 *{
-    // margin: 0;
-    // padding: 0;
     box-sizing: border-box;
     // outline: 1px solid red;
 }
@@ -14,8 +12,6 @@ body {
     --index: calc(1vw + 1vh);
     --vw: calc(100vw/1440);
     --container-padding-x: 26px;
-    // --container-padding-x: min(165px, max(var(--vw)* 165, 24px));
-    // --container-width: 1440px;
     --container-width: min(1440px, max(var(--vw)* 1440, 24px));
 }
 
@@ -39,9 +35,7 @@ a, a:link, a:visited {
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    // background: #FF0000;
     background: var(--grey40);
-    // background: #4a4b4c;
 }
 .reset {
     margin: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *

@@ -2,9 +2,7 @@
     background-color: var(--pink);
     position: relative;
     --angle: 18deg;
-    // padding-top: 417px;
     padding-top: min(417px, max(var(--vw)* 417, 70px)); 
-    // padding-bottom: 132px;
     padding-bottom: min(132px, max(var(--vw)* 132, 50px)); 
     padding-left: 18px;
     
@@ -65,17 +63,11 @@
     &__stars {
         display: flex;
         flex-wrap: wrap;
-        // width: 110px;
         width: min(120px, max(var(--vw)* 120, 50px)); 
         position: absolute;
-        // bottom: -53px;
         bottom: calc(-1*  min(53px, max(var(--vw)* 53, 10px)));
-        // column-gap: 20px;
         column-gap: min(20px, max(var(--vw)* 20, 10px)); 
-        // row-gap: 20px;
         row-gap: min(20px, max(var(--vw)* 20, 10px)); 
-        
-        // margin-left: 70px;
         margin-left: min(70px, max(var(--vw)* 70, 10px)); 
         @media (max-width: 412px) {
             bottom: -43px;
@@ -87,7 +79,6 @@
         line-height: min(70px, max(var(--vw)* 70, 36px));
         letter-spacing: 0;
         color: var(--violet);
-        // margin: 0 461px 128px 70px;
         margin: 0 min(461px, max(var(--vw)* 461, 50px))  128px 70px;
         @media (max-width: 1200px) {
             margin: 0;
@@ -130,9 +121,7 @@
         justify-content: center;
         border: 1px solid var(--yellow);
         border-radius: 50%;
-        // height: 320px;
         height: min(320px, max(var(--vw)* 320, 24px));
-        // width: 320px;
         width: min(320px, max(var(--vw)* 320, 24px));
         background-color: transparent;
         position: absolute;

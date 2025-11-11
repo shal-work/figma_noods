@@ -140,22 +140,6 @@ const gravity = (gravitySelector, gravityElement) => {
         // debugger
         gravity.style.transform = 'translate(0px , 0px)';
     });
-
-    // gravity.addEventListener('touchmove', e => {
-    //     let layerX = e.touches[0].clientX  - gravity.getBoundingClientRect().left -  gravity.getBoundingClientRect().width/2;
-    //     let layerY = e.touches[0].clientY  - gravity.getBoundingClientRect().top  - gravity.getBoundingClientRect().height/2;
-    //     let step = 3;
-    //     // gravity.style.WebkitTransform = 'translate(' + layerX / step + 'px ,' + layerY / step + 'px)';
-    //     gravity.style.transform = 'translate(' + layerX / step + 'px ,' + layerY / step + 'px)';
-    // });
-    // gravity.addEventListener('touchend', e => {
-    //     // gravity.style.WebkitTransform = 'translate(0px , 0px)';
-    //     gravity.style.transform = 'translate(0px , 0px)';
-    // });
-
-
-
-
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (gravity);

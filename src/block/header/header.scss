@@ -16,14 +16,11 @@
     }
 
     &__logo {
-        // height: 48px;
         height: min(48px, max(var(--vw)* 48, 34px));
     }
 
     &__letter {
-        // width: 45px;
         width: min(45px, max(var(--vw)* 45, 20px));
-        // height: 48px;
         height: min(48px, max(var(--vw)* 48, 22px));
     }
 
