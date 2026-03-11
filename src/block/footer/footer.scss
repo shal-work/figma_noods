@@ -81,7 +81,7 @@
         color: var(--violet);
         min-width: 160px;
         &::before {
-            content: url('/assets/img/asterisk.svg');
+            content: url('assets/img/asterisk.svg');
             width: 20px;
             height:20px;
             display: block;
